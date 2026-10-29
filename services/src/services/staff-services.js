@@ -14,7 +14,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createStaff = async (data) => {
+const createStaff = async (account_id, role_id, lastname, firstname, contact_no, email) => {
   // Input Validation
   if (!account_id || !role_id || !lastname || !firstname || !contact_no || !email) {
     throw new Error("Required fields are missing.");

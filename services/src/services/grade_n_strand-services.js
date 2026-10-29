@@ -13,7 +13,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createGradeNStrand = async (data) => {
+const createGradeNStrand = async (grade_level, strand, description) => {
   if (!grade_level || !strand || !description) {
     throw new Error("Required fields are missing.");
   }

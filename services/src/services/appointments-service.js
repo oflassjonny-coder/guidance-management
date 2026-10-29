@@ -14,7 +14,15 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createAppointment = async (data) => {
+const createAppointment = async (
+  student_id,
+  staff_id,
+  appointment_date,
+  appointment_time,
+  purpose,
+  status,
+  remarks,
+) => {
   // Input Validation
   if (!student_id || !staff_id || !appointment_date || !appointment_time || !purpose) {
     throw new Error("Required fields are missing.");

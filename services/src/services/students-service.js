@@ -1,5 +1,5 @@
-// 1. Import Database Connection and Query Definitions
-const db = require("../config/database.js");
+// 1. Importbase Connection and Query Definitions
+const db = require("../config/base.js");
 const {
   CREATE_STUDENT,
   FIND_ALL_STUDENTS,
@@ -10,25 +10,25 @@ const {
   FIND_STUDENTS_BY_NAME,
   UPDATE_STUDENT,
   DELETE_STUDENT,
-} = require("../database/queries/students-query.js");
+} = require("../base/queries/students-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createStudent = async (data) => {
+const createStudent = async (grade_section_id, account_id, lastname, firstname, middlename, contact_no) => {
   // Input Validation
-  if (!data.grade_section_id || !data.lastname || !data.firstname) {
+  if (!grade_section_id || !lastname || !firstname) {
     throw new Error("Required fields are missing.");
   }
 
   // Execute SQL query with parameter binding
   const [result] = await db.query(CREATE_STUDENT, [
-    data.grade_section_id,
-    data.account_id,
-    data.lastname,
-    data.firstname,
-    data.middlename,
-    data.contact_no,
+    grade_section_id,
+    account_id,
+    lastname,
+    firstname,
+    middlename,
+    contact_no,
   ]);
 
   return result;
@@ -102,18 +102,18 @@ const findStudentsByName = async (name) => {
 // ==========================================
 // UPDATE OPERATION
 // ==========================================
-const updateStudent = async (id, data) => {
+const updateStudent = async (id) => {
   if (!id) {
     throw new Error("Student ID is required.");
   }
 
   const [result] = await db.query(UPDATE_STUDENT, [
-    data.grade_section_id,
-    data.account_id,
-    data.lastname,
-    data.firstname,
-    data.middlename,
-    data.contact_no,
+    grade_section_id,
+    account_id,
+    lastname,
+    firstname,
+    middlename,
+    contact_no,
     id,
   ]);
 

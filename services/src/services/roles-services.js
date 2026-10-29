@@ -13,7 +13,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createRole = async (data) => {
+const createRole = async (name, description) => {
   if (!name || !description) {
     throw new Error("Required fields are missing.");
   }

@@ -13,7 +13,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createAccount = async (data) => {
+const createAccount = async (username, password) => {
   // Input Validation
   if (!username || !password) {
     throw new Error("Username and password are required.");

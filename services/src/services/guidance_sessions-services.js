@@ -15,7 +15,19 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createGuidanceSession = async (data) => {
+const createGuidanceSession = async (
+  case_record_id,
+  staff_id,
+  session_date,
+  session_time,
+  session_type,
+  concern,
+  discussion_summary,
+  intervention,
+  recommendation,
+  follow_up_date,
+  status,
+) => {
   // Input Validation
   if (!case_record_id || !staff_id || !session_date || !session_time || !session_type) {
     throw new Error("Required fields are missing.");

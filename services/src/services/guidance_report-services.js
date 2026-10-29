@@ -14,7 +14,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createGuidanceReport = async (data) => {
+const createGuidanceReport = async (staff_id, report_type, report_title, date_from, date_to) => {
   // Input Validation
   if (!staff_id || !report_type || !report_title || !date_from || !date_to) {
     throw new Error("Required fields are missing.");

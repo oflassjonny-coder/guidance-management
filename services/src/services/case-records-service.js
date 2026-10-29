@@ -17,7 +17,18 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createCaseRecord = async (data) => {
+const createCaseRecord = async (
+  student_id,
+  concern_id,
+  opened_by,
+  opened_date,
+  title,
+  description,
+  priority,
+  status,
+  closed_date,
+  closing_remarks,
+) => {
   // Input Validation
   if (!student_id || !concern_id || !opened_by || !opened_date || !title) {
     throw new Error("Required fields are missing.");

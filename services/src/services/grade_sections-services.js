@@ -16,7 +16,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createGradeSection = async (data) => {
+const createGradeSection = async (school_year_id, grade_n_strand_id, adviser_staff_id, section_name, description) => {
   if (!school_year_id || !grade_n_strand_id || !adviser_staff_id || !section_name || !description) {
     throw new Error("Required fields are missing.");
   }

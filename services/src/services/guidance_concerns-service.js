@@ -14,7 +14,7 @@ const {
 // ==========================================
 // CREATE OPERATION
 // ==========================================
-const createGuidanceConcern = async (data) => {
+const createGuidanceConcern = async (name, description, is_active) => {
   // Input Validation
   if (!name) {
     throw new Error("Concern name is required.");
