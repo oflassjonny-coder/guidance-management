@@ -1,5 +1,5 @@
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const rolesService = require("../services/role-service.js");
+const rolesService = require("../services/roles-services.js");
 
 // CREATE
 const createRole = async (req, res) => {

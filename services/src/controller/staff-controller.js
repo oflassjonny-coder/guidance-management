@@ -1,5 +1,5 @@
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const staffService = require("../services/staff-service.js");
+const staffService = require("../services/staff-services.js");
 
 // ==========================================
 // CREATE OPERATION

@@ -9,6 +9,17 @@ const db = require("./config/database.js");
 const app = express();
 const authRoutes = require("./routes/auth-routes.js");
 const accountsRoutes = require("./routes/accounts-routes.js");
+const appointmentRoutes = require("./routes/appointment-routes.js");
+const caserecordsRoutes = require("./routes/case-records-routes.js");
+const gradenstrandsRoutes = require("./routes/grade_n_strand-routes.js");
+const gradesectionRoutes = require("./routes/grade_sections-routes.js");
+const guidanceconcernsRoutes = require("./routes/guidance_concerns-routes.js");
+const guidancereportRoutes = require("./routes/guidance_report-routes.js");
+const guidancesessionRoutes = require("./routes/guidance_session-routes.js");
+const rolesRoutes = require("./routes/roles-routes.js");
+const schoolyearsRoutes = require("./routes/school_year-routes.js");
+const staffRoutes = require("./routes/staff-routes.js");
+const studentsRoutes = require("./routes/students-routes.js");
 
 const PROJECT_ROOT = path.join(__dirname, "../..");
 
@@ -55,5 +66,16 @@ app.get("/api/health/db", async (req, res) => {
 
 app.use("/api", authRoutes);
 app.use("/api/accounts", accountsRoutes);
+app.use("/api/appointment", appointmentRoutes);
+app.use("/api/case_records", caserecordsRoutes);
+app.use("/api/grade_n_strand", gradenstrandsRoutes);
+app.use("/api/grade_sections", gradesectionRoutes);
+app.use("/api/guidance_concerns", guidanceconcernsRoutes);
+app.use("/api/guidance_report", guidancereportRoutes);
+app.use("/api/guidance_session", guidancesessionRoutes);
+app.use("/api/roles", rolesRoutes);
+app.use("/api/school_years", schoolyearsRoutes);
+app.use("/api/staff", staffRoutes);
+app.use("/api/students", studentsRoutes);
 
 module.exports = app;

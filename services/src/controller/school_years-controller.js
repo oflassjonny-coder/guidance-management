@@ -1,5 +1,5 @@
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const schoolYearsService = require("../services/school_year-service.js");
+const schoolYearsService = require("../services/school_year-services.js");
 
 // CREATE
 const createSchoolYear = async (req, res) => {

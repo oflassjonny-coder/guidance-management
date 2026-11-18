@@ -1,5 +1,5 @@
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const gradeNStrandsService = require("../services/grade_n_strands-service.js");
+const gradeNStrandsService = require("../services/grade_n_strand-services.js");
 
 // ==========================================
 // CREATE OPERATION

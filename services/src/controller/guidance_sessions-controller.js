@@ -1,5 +1,5 @@
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const guidanceSessionsService = require("../services/guidance_sessions-service.js");
+const guidanceSessionsService = require("../services/guidance_sessions-services.js");
 
 // CREATE
 const createGuidanceSession = async (req, res) => {

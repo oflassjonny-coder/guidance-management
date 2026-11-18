@@ -1,5 +1,5 @@
 // 1. Importbase Connection and Query Definitions
-const db = require("../config/base.js");
+const db = require("../config/database.js");
 const {
   CREATE_STUDENT,
   FIND_ALL_STUDENTS,
@@ -10,7 +10,7 @@ const {
   FIND_STUDENTS_BY_NAME,
   UPDATE_STUDENT,
   DELETE_STUDENT,
-} = require("../base/queries/students-query.js");
+} = require("../database/queries/students-query.js");
 
 // ==========================================
 // CREATE OPERATION

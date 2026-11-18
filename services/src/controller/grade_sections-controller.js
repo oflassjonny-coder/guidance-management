@@ -1,5 +1,5 @@
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const gradeSectionsService = require("../services/grade_sections-service.js");
+const gradeSectionsService = require("../services/grade_sections-services.js");
 
 // CREATE
 const createGradeSection = async (req, res) => {
