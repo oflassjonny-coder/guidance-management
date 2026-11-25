@@ -7,10 +7,11 @@ const router = Router();
 
 router.use(authenticate);
 
-router.post("/", rolesController.createRole);
+// ✅ LGTM
 router.get("/", rolesController.findAllRoles);
-router.get("/", rolesController.findRoleById);
-router.get("/", rolesController.findRoleByName);
+router.get("/:id", rolesController.findRoleById);
+router.get("/name/:name", rolesController.findRoleByName);
+router.post("/", rolesController.createRole);
 router.put("/:id", rolesController.updateRole);
 router.delete("/:id", rolesController.deleteRole);
 

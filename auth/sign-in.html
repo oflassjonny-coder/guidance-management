@@ -37,7 +37,7 @@
     </div>
 
     <div class="d-flex flex-column flex-1 items-center justify-center">
-      <form class="w-75">
+      <form id="sign-in-form" class="w-75">
         <a class="mb-2 btn-tertiary" href="../index.html"><i class="mr-1 fa-solid fa-arrow-left-long"></i>Return</a>
         <h1 class="mb-6 text-32">Welcome Back! 👋</h1>
         <!-- Username -->
@@ -50,11 +50,11 @@
           <label for="password" class="label"><span class="mr-2 fa-solid fa-lock"></span>Password</label>
           <input class="mt-2 input" type="text" id="password" name="password" placeholder="Enter your password" />
         </div>
+        <p id="error-message" role="alert"></p>
 
-            <a href="../pages/dashboard.html" class="w-100 btn-primary btn-login" type="submit">
-              Log In
-            </a>
+        <button class="w-100 btn-primary btn-login" type="submit" id="sign-in-button">Log In</button>
       </form>
     </div>
+    <script type="module" src="../assets/js/pages/sign-in.js"></script>
   </body>
 </html>

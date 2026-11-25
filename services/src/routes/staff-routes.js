@@ -7,11 +7,12 @@ const router = Router();
 
 router.use(authenticate);
 
-router.post("/", staffController.createStaff);
+// ✅ LGTM
 router.get("/", staffController.findAllStaffs);
 router.get("/:id", staffController.findStaffById);
-router.get("/:accountId", staffController.findStaffByAccountId);
-router.get("/:email", staffController.findStaffByEmail);
+router.get("/account/:accountId", staffController.findStaffByAccountId);
+router.get("/email/:email", staffController.findStaffByEmail);
+router.post("/", staffController.createStaff);
 router.put("/:id", staffController.updateStaff);
 router.delete("/:id", staffController.deleteStaff.apply);
 

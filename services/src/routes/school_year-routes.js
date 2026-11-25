@@ -7,10 +7,11 @@ const router = Router();
 
 router.use(authenticate);
 
-router.post("/", schoolYearController.createSchoolYear);
+// ✅ LGTM
 router.get("/", schoolYearController.findAllSchoolYears);
-router.get("/id", schoolYearController.findSchoolYearById);
-router.get("/schoolYear", schoolYearController.findSchoolYearByYear);
+router.get("/:id", schoolYearController.findSchoolYearById);
+router.get("/year/:schoolYear", schoolYearController.findSchoolYearByYear);
+router.post("/", schoolYearController.createSchoolYear);
 router.put("/:id", schoolYearController.updateSchoolYear);
 router.delete("/:id", schoolYearController.deleteSchoolYear);
 

@@ -7,13 +7,14 @@ const router = Router();
 
 router.use(authenticate);
 
+// ✅ LGTM
 router.post("/", guidanceSessionsController.createGuidanceSession);
 router.get("/", guidanceSessionsController.findAllGuidanceSessions);
 router.get("/:id", guidanceSessionsController.findGuidanceSessionById);
-router.get("/caseRecordId", guidanceSessionsController.findGuidanceSessionsByCaseRecordId);
-router.get("/staffId", guidanceSessionsController.findGuidanceSessionsByStaffId);
-router.get("/status", guidanceSessionsController.findGuidanceSessionsByStatus);
-router.get("/sessionType", guidanceSessionsController.findGuidanceSessionsByType);
+router.get("/case/:caseRecordId", guidanceSessionsController.findGuidanceSessionsByCaseRecordId);
+router.get("/staff/:staffId", guidanceSessionsController.findGuidanceSessionsByStaffId);
+router.get("/staff/:status", guidanceSessionsController.findGuidanceSessionsByStatus);
+router.get("/type/:sessionType", guidanceSessionsController.findGuidanceSessionsByType);
 router.put("/:id", guidanceSessionsController.updateGuidanceSession);
 router.delete("/:id", guidanceSessionsController.deleteGuidanceSession);
 

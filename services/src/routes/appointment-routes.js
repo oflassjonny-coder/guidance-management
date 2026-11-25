@@ -7,10 +7,11 @@ const router = Router();
 
 router.use(authenticate);
 
+// ✅ LGTM
 router.get("/", appointsmentController.findAllAppointments);
 router.get("/:id", appointsmentController.findAppointmentById);
-router.get("/:studentId", appointsmentController.findAppointmentsByStudentId);
-router.get("/:staffId", appointsmentController.findAppointmentsByStaffId);
+router.get("/student/:studentId", appointsmentController.findAppointmentsByStudentId);
+router.get("/staff/:staffId", appointsmentController.findAppointmentsByStaffId);
 router.post("/", appointsmentController.createAppointment);
 router.put("/:id", appointsmentController.updateAppointment);
 router.delete("/:id", appointsmentController.deleteAppointment);

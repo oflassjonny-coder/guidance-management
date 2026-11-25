@@ -7,13 +7,14 @@ const router = Router();
 
 router.use(authenticate);
 
-router.post("/", gradeSectionController.createGradeSection);
+// ✅ LGTM
 router.get("/", gradeSectionController.findAllGradeSections);
 router.get("/id", gradeSectionController.findGradeSectionById);
-router.get("/schoolYearId", gradeSectionController.findGradeSectionsBySchoolYear);
-router.get("/gradeNStrandId", gradeSectionController.findGradeSectionsByGradeNStrand);
-router.get("/adviserStaffId", gradeSectionController.findGradeSectionsByAdviser);
-router.get("/", gradeSectionController.findGradeSection);
+router.get("/year/:schoolYearId", gradeSectionController.findGradeSectionsBySchoolYear);
+router.get("/grade/:gradeNStrandId", gradeSectionController.findGradeSectionsByGradeNStrand);
+router.get("/adviser/:adviserStaffId", gradeSectionController.findGradeSectionsByAdviser);
+// Missing findGradeSection
+router.post("/", gradeSectionController.createGradeSection);
 router.put("/:id", gradeSectionController.updateGradeSection);
 router.delete("/:id", gradeSectionController.deleteGradeSection);
 

@@ -7,10 +7,11 @@ const router = Router();
 
 router.use(authenticate);
 
+// ✅ LGTM
 router.get("/", guidancereportController.findAllGuidanceReports);
 router.get("/:id", guidancereportController.findGuidanceReportById);
-router.get("/:staffId", guidancereportController.findGuidanceReportsByStaffId);
-router.get("/:reportType", guidancereportController.findGuidanceReportsByType);
+router.get("/staff/:staffId", guidancereportController.findGuidanceReportsByStaffId);
+router.get("/type/:reportType", guidancereportController.findGuidanceReportsByType);
 router.post("/", guidancereportController.createGuidanceReport);
 router.put("/:id", guidancereportController.updateGuidanceReport);
 router.delete("/:id", guidancereportController.deleteGuidanceReport);
